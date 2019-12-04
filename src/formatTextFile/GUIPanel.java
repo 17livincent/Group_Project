@@ -14,6 +14,7 @@ public class GUIPanel extends JPanel {
 	// components of the panel
 	private JButton start, clear;
 	private JLabel label1, label2;
+	private JLabel message; // not yet placed
 	private JPanel buttons1;
 	private JTextField field1, field2;
 
@@ -78,7 +79,10 @@ public class GUIPanel extends JPanel {
 
 			if (action == start) {
 				// wPanel.resume();
-				Formatter doc = new Formatter();
+				String inputFileName = field1.getText();
+				String outputFileName = field2.getText();
+				Formatter doc = new Formatter(inputFileName, outputFileName);
+				message.setText(doc.checkInitialErrors(inputFileName, outputFileName));
 			} else if (action == clear) {
 				repaint();
 			}
