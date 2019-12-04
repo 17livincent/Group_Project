@@ -84,7 +84,8 @@ public class GUIPanel extends JPanel {
 				Formatter doc = new Formatter(inputFileName, outputFileName);
 				message.setText(doc.checkInitialErrors(inputFileName, outputFileName));
 			} else if (action == clear) {
-				repaint();
+				field1.setText("");
+				field2.setText("");
 			}
 		}
 	} // end of ButtonListener
