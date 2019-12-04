@@ -15,7 +15,7 @@ public class Formatter {
 	public void readFile() {
 		BufferedReader reader;
 		try {
-			reader = new BufferedReader(new FileReader("/Users/pankaj/Downloads/myfile.txt"));
+			reader = new BufferedReader(new FileReader(inputFileName));
 			String line = reader.readLine();
 			while (line != null) {
 				System.out.println(line);
